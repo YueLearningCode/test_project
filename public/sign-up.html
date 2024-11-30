@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SIgn to Quack</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="shuffle-for-bootstrap.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>   
+    <style>
+      .form.sign{
+          position: absolute;
+          max-width: 475px;
+          opacity: 0;
+          pointer-events: none;
+      }
+      
+      .forms.show-signup .form.login{
+          opacity: 0;
+          pointer-events: none;
+          z-index: -1;
+      }
+      .forms.show-signup .form.sign{
+          opacity: 1;
+          pointer-events: auto;
+      }
+      .form .field{
+          position: relative;
+      }
+
+      .eye-icon{
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          transform: translateY(-50%);
+          font-size: 18px;
+          color: #8b8b8b;
+          cursor: pointer;
+          padding: 5px;
+      }
+      .field button{
+          color: #fff;
+          background:#00fff262;
+          transition: all 0.3s ease;
+          cursor: pointer;
+      }
+      .field button:hover{
+          background:  #ffffff;
+          color: #0054ff;
+      }
+    </style>
+</head>
+<body style="background: #090a21; color: white;">
+    <div class="container-fluid p-lg-0" style="max-height: 100vh;">
+                        
+      <section class="position-relative " style="padding-top: 78px;">
+        <div class="container">
+          <div class="row forms" >
+            <div class="col-12 col-md-9 col-lg-5 mx-auto mx-lg-0 mb-5 form login">
+              <div>
+                <div class="mx-auto text-center py-5">
+                  <form action="#">
+                    <span class="text-muted">Sign In</span>
+                    <h3 class="fw-bold mb-5">Join our community</h3>
+                    <div class="field input-field">
+                      <input class="form-control mb-2" type="email" placeholder="E-mail address">
+                  </div>
+
+                  <div class="field input-field">
+                    <input class="form-control mb-2" type="password" placeholder="Password" required>
+                    <i class='bx bx-hide eye-icon'></i>
+                  </div>
+                    
+                    
+                    <button class="btn btn-primary py-2 w-100 mb-3"><a href="index.php" class="text-light" style="text-decoration:none;">Sign In</a> </button>
+                    <a class="d-inline-block link-secondary mb-4" href="#" style="text-decoration:none;"><small>Forgot password?</small></a>
+                    <a class="d-flex justify-content-center align-items-center mb-2 py-2 bg-light rounded text-decoration-none text-muted" href="#">
+                      <img class="img-fluid" src="bootstrap5-plain-assets/socials/facebook.svg" alt="">
+                      <span class="text-muted">Sign in with Facebook</span>
+                    </a>
+                    <a class="d-flex justify-content-center align-items-center mb-2 py-2 bg-light rounded text-decoration-none text-muted" href="#">
+                      <img class="img-fluid" src="bootstrap5-plain-assets/socials/twitter.svg" alt="">
+                      <span class="text-muted">Sign in with Twitter</span>
+                    </a>
+                    <p class="text-muted">
+                      <span><small>Don't have account?</small></span>
+                      <a href="#" class="link sign-link" style="text-decoration:none;">Sign Up Here!</a>
+                    </p>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-9 col-lg-5 mx-auto mx-lg-0 mb-5 form sign">
+              <div class="text-center py-5">
+                <span class="text-muted">Sign Up</span>
+                <h3 class="fw-bold mb-5">Create new account</h3>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-6 mb-2 mb-lg-0">
+                    <input class="form-control" type="text" placeholder="First Name">
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <input class="form-control" type="text" placeholder="Last Name">
+                  </div>
+                </div>
+                <input class="form-control mb-2" type="email" placeholder="E-mail address">
+                <input class="form-control mb-3" type="password" placeholder="Password" required>
+                <label class="mb-3">
+                  <input class="form-check-input me-2" type="checkbox" name="terms" value="1">
+                  <small class="text-muted">By signing up, you agree to our <a href="#">Terms, Data Policy</a> and <a href="#">Cookies Policy</a>.</small>
+                </label>
+                <button class="btn btn-primary py-2 w-100 mb-3"><a href="#" class="link login-link text-light" style="text-decoration:none;">Sign Up</a></button>
+                <p class="text-muted">
+                  <span><small>Already have an account?</small></span>
+                  <a href="#" class="link login-link" style="text-decoration:none;">Sign In Here!</a>
+                </p>
+                
+              </div>
+            </div>
+          </div>
+          <div class="d-none d-lg-block position-absolute top-0 end-0 bottom-0 w-50" style="background-image: url('image/masbro.jpg'); background-repeat: no-repeat; background-size: cover; filter: brightness(40%); z-index: -2;"></div>
+          <div class="d-none d-lg-block position-absolute top-0 end-0 bottom-0 w-100" style="background: linear-gradient(270deg,#11133900 , #090a21, #090a21 );  z-index: -1;"></div>
+        </div>
+        
+        
+      </section>
+                        
+     
+            </div>
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+      const forms = document.querySelector(".forms"),
+pwShowHide = document.querySelectorAll(".eye-icon"),
+links = document.querySelectorAll(".link");
+
+pwShowHide.forEach(eyeIcon => {
+eyeIcon.addEventListener("click", () => {
+  let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".password");
+  
+  pwFields.forEach(password => {
+      if(password.type === "password"){
+          password.type = "text";
+          eyeIcon.classList.replace("bx-hide", "bx-show");
+          return;
+      }
+      password.type = "password";
+      eyeIcon.classList.replace("bx-show", "bx-hide");
+  })
+  
+})
+})      
+
+    links.forEach(link => {
+      link.addEventListener("click", e => {
+      e.preventDefault();
+      forms.classList.toggle("show-signup");
+    })
+})
+  </script>
+</body>
+</html>
